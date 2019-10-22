@@ -16,6 +16,13 @@ public class NumericComparisons {
         System.out.println(num1 + " is negative: "+ isNegative(num1));
         System.out.println(num1 + " is non negative: "+ isNonNegative(num1));
         System.out.println(num1 + " is non positive: "+ isNonPositive(num1));
+
+        System.out.print("Enter the second number: ");
+        Scanner scan1 = new Scanner(System.in);
+        int num2 = scan1.nextInt();
+        System.out.println(num1 + " is factor of " + num2+": "+ isFactor(num1, num2));
+        System.out.println(num1 +" is multiple of "+num2+": "+isMultiple(num1, num2));
+
     }
 
     public static boolean isZero(int num){
@@ -32,9 +39,9 @@ public class NumericComparisons {
     public static boolean isNonNegative(int num){
         return num>=0;
     }
-    public static boolean isNonPositive(int num){
-        return num<=0;
-    }
+    public static boolean isNonPositive(int num){ return num<=0;}
+    public static boolean isFactor(int num, int num1){return num1%num == 0;}
+    public static boolean isMultiple(int num, int num1){return num%num1 == 0;}
 
             }
 
