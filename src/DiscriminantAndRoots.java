@@ -10,6 +10,7 @@ public class DiscriminantAndRoots {
         System.out.println(roots(a, b, c));
     }
 
+
     public static String roots(int a, int b, int c){
         double discriminant = Math.pow(b, 2) - 4 * a * c;
         if (discriminant == 0){
