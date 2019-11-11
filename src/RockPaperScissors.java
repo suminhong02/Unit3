@@ -1,6 +1,6 @@
 //Sumin Hong
 //11/7/2019
-//
+//Play rock-paper-scissors with computer using if statement.
 
 import java.util.Scanner;
 
@@ -25,45 +25,41 @@ public class RockPaperScissors {
 
     }
 
-    public static String WhoWins(String computer, String person){
+    public static String whoWins(String computer, String person){
 
         if(computer.equals("rock") && person.equals("rock")){
-            return "You tied!";
+            return "You chose " + person + ".\nThe computer chose " + computer + ".\n" + "You tied!";
         }
         else if(computer.equals("rock") && person.equals("paper")){
-            return "You win!";
+            return "You chose " + person + ".\nThe computer chose " + computer + ".\n" + "You win!";
         }
         else if(computer.equals("rock") && person.equals("scissors")){
-            return "Computer wins!";
+            return "You chose " + person + ".\nThe computer chose " + computer + ".\n" + "The computer wins!";
         }
         else if(computer.equals("paper") && person.equals("rock")){
-            return "Computer wins!";
+            return "You chose " + person + ".\nThe computer chose " + computer + ".\n" + "The computer wins!";
         }
         else if(computer.equals("paper") && person.equals("paper")){
-            return "You tied!";
+            return "You chose " + person + ".\nThe computer chose " + computer + ".\n" + "You tied!";
         }
         else if(computer.equals("paper") && person.equals("scissors")){
-            return "You win!";
+            return "You chose " + person + ".\nThe computer chose " + computer + ".\n" + "You win!";
         }
         else if(computer.equals("scissors") && person.equals("rock")){
-            return "You win!";
+            return "You chose " + person + ".\nThe computer chose " + computer + ".\n" + "You win!";
         }
         else if(computer.equals("scissors") && person.equals("paper")){
-            return "Computer wins!";
+            return "You chose " + person + ".\nThe computer chose " + computer + ".\n" + "The computer wins!";
         }
         else{
-            return "You tied!";
+            return "You chose " + person + ".\nThe computer chose " + computer + ".\n" + "You tied!";
         }
     }
     public static void main(String [] args){
 
-
         System.out.println("Please choose either rock, paper, or scissors.");
         String person = getUserChoice();
         String computer = getComputerChoice();
-        System.out.println("You chose " +person+ ".");
-        System.out.println("The computer chose " + computer + ".");
-        String winner = WhoWins(computer, person);
-        System.out.println(winner);
+        System.out.println(whoWins(person, computer));
     }
 }
